@@ -1,7 +1,7 @@
-"" scheme
 set background=dark
 colorscheme solarized
 
+"" status line
 set laststatus=2                  " show status bar
 set statusline=
 set statusline+=%t\               " filename
