@@ -16,6 +16,9 @@ fu! RestoreSess()
   endif                                                                                                                                                                                                                                                                                                                       
 endfunction                                                                                                                                                                                                                                                                                                                 
 
-autocmd VimLeave * call SaveSess()                                                                                                                                                                                                                                                                                          
-autocmd VimEnter * call RestoreSess()
+if has('gui_running')
+  autocmd VimLeave * call SaveSess()                                                                                                                                                                                                                                                                                          
+  autocmd VimEnter * call RestoreSess()
+endif
+"set sessionoptions-=options  " Don't save options
 
