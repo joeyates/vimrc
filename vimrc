@@ -1,6 +1,3 @@
-"" TODO:
-"" - git repo
-
 "" System
 set nocompatible                  " no vi compatability
 
