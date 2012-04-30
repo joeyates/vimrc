@@ -6,7 +6,7 @@ set laststatus=2                  " show status bar
 set statusline=
 set statusline+=%t\               " filename
 set statusline+=%y\               " file type
-set statusline+=[%c,%l]           " column and line
+set statusline+=[%l,%c]           " file position: [line,column]
 
 "" whitespace
 set nowrap
