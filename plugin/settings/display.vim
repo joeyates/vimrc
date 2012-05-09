@@ -17,3 +17,5 @@ set expandtab                     " convert tabs to spaces
 "" cursor
 set gcr=a:blinkon0                " disable cursor blink
 
+set number                        " show line numbers
+
