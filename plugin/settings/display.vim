@@ -10,7 +10,8 @@ set statusline+=[%l,%c]           " file position: [line,column]
 
 "" whitespace
 set nowrap
-set tabstop=2 shiftwidth=2
+set tabstop=2
+set shiftwidth=2
 set expandtab                     " convert tabs to spaces
 
 "" cursor
