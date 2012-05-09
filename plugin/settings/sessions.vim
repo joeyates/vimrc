@@ -16,14 +16,16 @@ fu! RestoreSess()
   endif
 endfunction
 
-if has('gui_running')
-  autocmd VimLeave * call SaveSess()
-  autocmd VimEnter * nested call RestoreSess()
+autocmd VimLeave * call SaveSess()
+autocmd VimEnter * nested call RestoreSess()
 
-  set sessionoptions-=options  " Don't save options
-  set sessionoptions-=winpos   " Restore window position
-  set sessionoptions-=resize   " Restore window size
-  set sessionoptions-=help     " Don't reload help buffers
-  set sessionoptions-=blank    " Don't reload blank buffers
-endif
+set sessionoptions+=winpos   " Restore window position
+set sessionoptions+=resize   " Restore window size
+set sessionoptions-=options  " Don't save options
+set sessionoptions-=help     " Don't reload help buffers
+set sessionoptions-=blank    " Don't reload blank buffers
+
+set guioptions-=m               " no menu
+set guioptions-=T               " no tool bar
+set guioptions-=r               " no right scroll bar
 
