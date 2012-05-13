@@ -19,3 +19,7 @@ set gcr=a:blinkon0                " disable cursor blink
 
 set number                        " show line numbers
 
+set guioptions-=m               " no menu
+set guioptions-=T               " no tool bar
+set guioptions-=r               " no right scroll bar
+
