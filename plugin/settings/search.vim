@@ -5,3 +5,7 @@ set incsearch                  " highlight text as you enter search
 set ignorecase                 " case insensitive search
 set smartcase                  " ...unless search contains a capital
 
+" use perl-style regexes
+nnoremap / /\v
+vnoremap / /\v
+
