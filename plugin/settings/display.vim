@@ -23,3 +23,6 @@ set guioptions-=m               " no menu
 set guioptions-=T               " no tool bar
 set guioptions-=r               " no right scroll bar
 
+"" long lines
+set colorcolumn=85
+
