@@ -1,7 +1,4 @@
+bundle/
 *.swp
 .session.vim
-ftplugin/html_snip_helper.vim
-snipMate*
-snippets/*.snippets
-syntax/snippet.vim
 
