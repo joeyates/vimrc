@@ -10,3 +10,9 @@ set encoding=utf-8
 
 call pathogen#infect()
 
+"" When using ctrlp.vim, open files in a new tab
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
+
