@@ -1,6 +1,10 @@
 set background=dark
 colorscheme solarized
 
+if has('gui_running')
+  set guifont=Monospace\ 11
+endif
+
 "" status line
 set laststatus=2                  " show status bar
 set statusline=
