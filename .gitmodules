@@ -10,4 +10,7 @@
 [submodule "bundle/ctrlp.vim"]
 	url = git://github.com/kien/ctrlp.vim.git
 	path = bundle/ctrlp.vim
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
 
