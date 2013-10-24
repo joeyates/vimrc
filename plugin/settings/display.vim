@@ -21,7 +21,7 @@ set expandtab                     " convert tabs to spaces
 "" cursor
 set gcr=a:blinkon0                " disable cursor blink
 
-set number                        " show line numbers
+set nonumber                      " show line numbers
 
 set guioptions-=m               " no menu
 set guioptions-=T               " no tool bar
