@@ -1,9 +1,8 @@
 "" Save and reload session in current directory
-fu! SaveSess()
-  execute 'mksession! ' . getcwd() . '/.session.vim'
-endfunction
-
 fu! RestoreSess()
+  if $VIM_NO_SESSION == 1
+    return
+  end
   if filereadable(getcwd() . '/.session.vim')
     execute 'so ' . getcwd() . '/.session.vim'
     if bufexists(1)
@@ -16,14 +15,18 @@ fu! RestoreSess()
   endif
 endfunction
 
-if has("gui_running")
-  autocmd VimLeave * call SaveSess()
-  autocmd VimEnter * nested call RestoreSess()
+fu! SaveSess()
+  if $VIM_NO_SESSION == 1
+    return
+  end
+  execute 'mksession! ' . getcwd() . '/.session.vim'
+endfunction
 
-  set sessionoptions+=winpos   " Restore window position
-  set sessionoptions+=resize   " Restore window size
-  set sessionoptions-=options  " Don't save options
-  set sessionoptions-=help     " Don't reload help buffers
-  set sessionoptions-=blank    " Don't reload blank buffers
-end
+autocmd VimEnter * nested call RestoreSess()
+autocmd VimLeave * call SaveSess()
 
+set sessionoptions+=winpos   " Restore window position
+set sessionoptions+=resize   " Restore window size
+set sessionoptions-=options  " Don't save options
+set sessionoptions-=help     " Don't reload help buffers
+set sessionoptions-=blank    " Don't reload blank buffers
