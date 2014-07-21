@@ -1,8 +1,11 @@
-set background=dark
-colorscheme solarized
-
 if has('gui_running')
   set guifont=Monospace\ 11
+  "" cursor
+  set guicursor=a:blinkon0        " disable cursor blink
+
+  set guioptions-=m               " no menu
+  set guioptions-=T               " no tool bar
+  set guioptions-=r               " no right scroll bar
 endif
 
 "" status line
@@ -18,14 +21,13 @@ set tabstop=2
 set shiftwidth=2
 set expandtab                     " convert tabs to spaces
 
-"" cursor
-set gcr=a:blinkon0                " disable cursor blink
+set nonumber                      " don't show line numbers
 
-set nonumber                      " show line numbers
-
-set guioptions-=m               " no menu
-set guioptions-=T               " no tool bar
-set guioptions-=r               " no right scroll bar
+"" colors
+if has('gui_running')
+  colorscheme solarized
+  set background=dark
+end
 
 if !has('gui_running')
   colorscheme jgy-256
