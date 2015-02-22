@@ -30,5 +30,6 @@ function! RubyUpdateHashes() range
 endfunction
 command! -range RubyUpdateHashes <line1>,<line2>call RubyUpdateHashes()
 
+" launch with '<Leader>h'
 autocmd FileType ruby nnoremap <Leader>h :RubyUpdateHashes<CR>
 autocmd FileType ruby vnoremap <Leader>h :RubyUpdateHashes<CR>gv
