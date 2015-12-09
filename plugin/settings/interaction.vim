@@ -13,3 +13,8 @@ set visualbell t_vb=              " disable all bells
 nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
+
+" Leader, p: enter 'paste mode'
+nnoremap <Leader>p :set paste<CR>
+" Leader, n: leave 'paste mode'
+nnoremap <Leader>n :set nopaste<CR>
