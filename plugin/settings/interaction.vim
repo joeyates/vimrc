@@ -9,3 +9,7 @@ set visualbell t_vb=              " disable all bells
 :command WQ wq
 :command Wq wq
 
+" disable keys which have annoying behaviour when typed by mistake
+nnoremap <F1> <nop>
+nnoremap Q <nop>
+nnoremap K <nop>
