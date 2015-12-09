@@ -1,4 +1,4 @@
-autocmd BufNewFile,BufRead Capfile,Rakefile	setf ruby
+autocmd BufNewFile,BufRead Capfile,Cheffile,Rakefile,*.thor	setf ruby
 
 function! SubstituteInLine(linenumber, regexp, replacement)
   let line = getline(a:linenumber)
